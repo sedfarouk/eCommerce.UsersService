@@ -17,7 +17,20 @@ builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializ
 builder.Services.AddAutoMapper(cfg => { },
 typeof(ApplicationUserMappingProfile).Assembly);
 
+// FluentValidations
 builder.Services.AddFluentValidationAutoValidation();
+
+// Add API explorer services
+builder.Services.AddEndpointsApiExplorer();
+
+// Add swagger generation services to create swagger specification
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddCors(opt => opt.AddDefaultPolicy(policyBuilder => 
+        policyBuilder.WithOrigins("http://localhost:4200")
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+    ));
 
 // Build the web application
 var app = builder.Build();
@@ -27,6 +40,10 @@ app.UseExceptionHandlingMiddleware();
 
 // Routing
 app.UseRouting();
+app.UseSwagger(); // Adds endpoint that can serve the swagger.json
+app.UseSwaggerUI(); // Adds swagger user interface (interactive page to explore and test API endpoints)
+
+app.UseCors(opt => opt.AllowAnyOrigin());
 
 // Auth
 app.UseAuthentication();
