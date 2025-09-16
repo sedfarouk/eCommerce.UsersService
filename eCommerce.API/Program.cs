@@ -43,7 +43,7 @@ app.UseRouting();
 app.UseSwagger(); // Adds endpoint that can serve the swagger.json
 app.UseSwaggerUI(); // Adds swagger user interface (interactive page to explore and test API endpoints)
 
-app.UseCors(opt => opt.AllowAnyOrigin());
+app.UseCors();
 
 // Auth
 app.UseAuthentication();
