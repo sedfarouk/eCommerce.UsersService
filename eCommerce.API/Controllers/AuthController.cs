@@ -19,11 +19,6 @@ public class AuthController : Controller
     [HttpPost("register")] // POST api/auth/register
     public async Task<IActionResult> Register(RegisterRequest registerRequest)
     {
-        if (registerRequest == null)
-        {
-            return BadRequest("Invalid registration request data");
-        }
-        
         AuthenticationResponse? authenticationResponse = await _usersService.Register(registerRequest);
 
         if (authenticationResponse == null || !authenticationResponse.Success)
@@ -37,11 +32,6 @@ public class AuthController : Controller
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginRequest loginRequest)
     {
-        if (loginRequest == null)
-        {
-            return BadRequest("Invalid login request data");
-        }
-        
         AuthenticationResponse? authenticationResponse = await _usersService.Login(loginRequest);
 
         if (authenticationResponse == null || !authenticationResponse.Success)
