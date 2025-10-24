@@ -17,11 +17,12 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "POSTGRES_HOST": "localhost",
-        "POSTGRES_DATABASE": "eCommerceUsers",
+        "POSTGRES_DATABASE": "ecommerceusers",
         "POSTGRES_PORT": "5432",
         "POSTGRES_USER": "postgres",
-        "POSTGRES_PASSWORD": "admin"
-      }
+        "POSTGRES_PASSWORD": "Incorrect@1"
+      },
+      "launchUrl": "swagger"
     },
     "https": {
       "commandName": "Project",
@@ -31,10 +32,10 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "POSTGRES_HOST": "localhost",
-        "POSTGRES_DATABASE": "eCommerceUsers",
+        "POSTGRES_DATABASE": "ecommerceusers",
         "POSTGRES_PORT": "5432",
         "POSTGRES_USER": "postgres",
-        "POSTGRES_PASSWORD": "admin"
+        "POSTGRES_PASSWORD": "Incorrect@1"
       },
       "launchUrl": "swagger"
     },
@@ -44,11 +45,12 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "POSTGRES_HOST": "localhost",
-        "POSTGRES_DATABASE": "eCommerceUsers",
+        "POSTGRES_DATABASE": "ecommerceusers",
         "POSTGRES_PORT": "5432",
         "POSTGRES_USER": "postgres",
-        "POSTGRES_PASSWORD": "admin"
-      }
+        "POSTGRES_PASSWORD": "Incorrect@1"
+      },
+      "launchUrl": "swagger"
     }
   }
 }

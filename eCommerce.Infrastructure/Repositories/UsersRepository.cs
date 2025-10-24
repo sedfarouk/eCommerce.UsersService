@@ -39,18 +39,18 @@ internal class UsersRepository : IUsersRepository
 
         var parameters = new { email, password };
 
-        ApplicationUser?  user = await _dbContext.DbConnection.QueryFirstOrDefaultAsync<ApplicationUser>(query, parameters);
+        ApplicationUser? user = await _dbContext.DbConnection.QueryFirstOrDefaultAsync<ApplicationUser>(query, parameters);
  
         return user;
     }
 
     public async Task<ApplicationUser?> GetUserByUserId(Guid? userId)
     {
-         string query = "SELECT * FROM public.\"users\" WHERE \"userid=\" = @userId";
+         string query = "SELECT * FROM public.\"users\" WHERE \"userid\" = @userId";
 
          var parameters = new { userId };
 
-         ApplicationUser? user = await _dbContext.DbConnection.QueryFirstOrDefaultAsync(query, parameters);
+         ApplicationUser? user = await _dbContext.DbConnection.QueryFirstOrDefaultAsync<ApplicationUser>(query, parameters);
 
          return user;
     }

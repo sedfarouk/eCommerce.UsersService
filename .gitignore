@@ -5,6 +5,7 @@
 
 eCommerce.API/appsettings.json
 eCommerce.API/appsettings.Development.json
+eCommerce.API/Properties/launchSettings.json
 
 # dotenv files
 .env
